@@ -1,5 +1,8 @@
 /*
 jquery.animateCSS - http://intuity.de
+
+Authors: Marcel Müller, Matthias Wagler
+
 LICENSED UNDER THE  MIT LICENSE (MIT)
 
 Copyright (c) 2011 Intuity
@@ -82,27 +85,3 @@ $.fn.extend({
 	}
  });
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- /*if(settings.objectWave == 'end') {
-	var multi = 1/(index+1);
-
-	delay = (settings.delay*multi)/1000 + "s";
-	
-	console.log(multi);
-	console.log("delay     !! : "+delay);
-} else if(settings.objectWave == 'start') {
-	var multi = 1/(index+1);
-
-	delay = settings.delay/1000+(settings.delay*multi)/1000 + "s";
-	
-	console.log(multi);
-	console.log("delay     !! : "+delay);
-}*/
