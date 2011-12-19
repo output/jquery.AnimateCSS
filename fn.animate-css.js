@@ -20,36 +20,29 @@ $.fn.extend({
 		var settings = {
 			duration : 500,
 			delay : 0,
-			swarm : { delay:0, random:false, kind:'delay' },
+			eachElement : { addDuration:0, addDelay:0, randomizeDuration:0, randomizeDelay:0 },
 			autoHide: false,
 			random: false,
 			onComplete: null
 		};
-		
+
 		
 		return this.each(function(index) {
-		  
+		
 			if (options)  $.extend( settings, options );
+			var aDu = settings.eachElement.addDuration,
+				aDe = settings.eachElement.addDelay,
+				rDu = settings.eachElement.randomizeDuration,
+				rDe = settings.eachElement.randomizeDelay;
+			
 			var obj = $(this),
 				duration = settings.duration,
 				delay = settings.delay,
 				oldTimeouts = obj.data("animationTimeout"),
 				onComplete = settings.onComplete;
 			
-			if(settings.swarm.time > 0) {
-				var multi = index;
-				
-				if(settings.swarm.random) multi = Math.random().toFixed(1);
-				
-				if(settings.swarm.kind == 'delay') {
-					console.log('delay');
-					delay = settings.delay+settings.swarm.time*multi;
-				} else if(settings.swarm.kind == 'duration') {
-					console.log('duration');
-					duration = settings.duration+settings.swarm.time*multi;
-					console.log
-				}
-			}
+			duration = 	settings.duration	-	(settings.duration*Math.random().toFixed(3)*rDu)	+	(aDu  -  aDu*Math.random().toFixed(3)*rDu)*index;
+			delay = 	settings.delay		-	(settings.delay*Math.random().toFixed(3)*rDe)	+	(aDe  -  aDe*Math.random().toFixed(3)*rDe)*index;
 			
 			if (oldTimeouts!=null) {
 				window.clearTimeout(oldTimeouts);
@@ -81,7 +74,8 @@ $.fn.extend({
 			
 			obj.data("animationTimeout", timeout);
 
+		
+
 		});
 	}
  });
- 
