@@ -2,12 +2,19 @@ $(function() {
 	var quad = "<div class='quad'></div>";
 	var maxDivs = 15;
 	for(var i = 0; i<maxDivs; i++) {
-		$('body').append(quad);
+		$('#container').append(quad);
 	}
+	
 	$('#fade-out').on('click', function() {
-		$('body').children('.quad').animateCSS('fadeOutRear', {duration:300, delay:0, eachElement: {addDuration:0, addDelay:50, randomizeDuration:0.5, randomizeDelay:0}, autoHide:true });
+		$('#container').children('.quad').animateCSS('fadeOutRear', {duration:250, delay:0, eachElement: {addDuration:0, addDelay:60, randomizeDuration:0, randomizeDelay:0}, autoHide:true });
 	});
+	
 	$('#fade-in').on('click', function() {
-		$('body').children('.quad').animateCSS('fadeInFront', {duration:300, delay:0, eachElement: {addDuration:300, addDelay:0, randomizeDuration:0.8, randomizeDelay:0.4}, autoHide:false });
+		$('#container').children('.quad').animateCSS('fadeInLeft', {duration:500, delay:0, eachElement: {addDuration:30, addDelay:60, randomizeDuration:0, randomizeDelay:0}, autoHide:false });
 	});
+	
+	$('#wobble').on('click', function() {
+		$('#container').children('.quad').css("opacity",1).animateCSS('wobble', {duration:800, delay:0, eachElement: {addDuration:10, addDelay:100, randomizeDuration:0.6, randomizeDelay:0.4}, autoHide:false });
+	});
+
 });

@@ -20,11 +20,15 @@ body, html {
 .quad:hover {}
 .quad:active {}
 
-
-.fade-bt {
-	text-transform:uppercase;
-	cursor:pointer;
+#controls {
+	background: #eee;
 }
-.fade-bt:hover {
-	color:rgb(185, 65, 65);
-}
+	.fade-bt {
+		text-transform: uppercase;
+		cursor: pointer;
+		display: inline-block;
+		margin:20px;
+	}
+	.fade-bt:hover {
+		color:rgb(185, 65, 65);
+	}
