@@ -16,7 +16,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 $.fn.extend({ 
 	animateCSS: function(classes, options) {
-	
+		
 		var settings = {
 			duration : 500,
 			delay : 0,
@@ -25,7 +25,8 @@ $.fn.extend({
 			random: false,
 			onComplete: null
 		};
-
+		
+		var animateClasses = "flash bounce shake tada swing wobble pulse flip flipInX flipOutX flipInY flipOutY fadeIn fadeInUp fadeInDown fadeInLeft fadeInRight fadeInUpBig fadeInDownBig fadeInLeftBig fadeInRightBig fadeOut fadeOutUp fadeOutDown fadeOutLeft fadeOutRight fadeOutUpBig fadeOutDownBig fadeOutLeftBig fadeOutRightBig bounceIn bounceInDown bounceInUp bounceInLeft bounceInRight bounceOut bounceOutDown bounceOutUp bounceOutLeft bounceOutRight rotateIn rotateInDownLeft rotateInDownRight rotateInUpLeft rotateInUpRight rotateOut rotateOutDownLeft rotateOutDownRight rotateOutUpLeft rotateOutUpRight hinge rollIn rollOut";
 		
 		return this.each(function(index) {
 		
@@ -48,7 +49,7 @@ $.fn.extend({
 				window.clearTimeout(oldTimeouts);
 			}
 	
-			obj.show().css({
+			obj.removeClass(animateClasses).show().css({
 				"-ms-animation-duration": duration+"ms",
 				"-webkit-animation-duration": duration+"ms",
 				"-moz-animation-duration": duration+"ms",
