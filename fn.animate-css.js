@@ -20,6 +20,7 @@ $.fn.extend({
 		var settings = {
 			duration : 500,
 			delay : 0,
+			easing : "cubic-bezier(0.785, 0.135, 0.150, 0.860)",
 			eachElement : { addDuration:0, addDelay:0, randomizeDuration:0, randomizeDelay:0 },
 			autoHide: false,
 			random: false,
@@ -40,7 +41,8 @@ $.fn.extend({
 				duration = settings.duration,
 				delay = settings.delay,
 				oldTimeouts = obj.data("animationTimeout"),
-				onComplete = settings.onComplete;
+				onComplete = settings.onComplete,
+				easing = settings.easing;
 			
 			duration = 	settings.duration	-	(settings.duration*Math.random().toFixed(3)*rDu)	+	(aDu  -  aDu*Math.random().toFixed(3)*rDu)*index;
 			delay = 	settings.delay		-	(settings.delay*Math.random().toFixed(3)*rDe)	+	(aDe  -  aDe*Math.random().toFixed(3)*rDe)*index;
@@ -50,6 +52,10 @@ $.fn.extend({
 			}
 	
 			obj.removeClass(animateClasses).show().css({
+				"-ms-transition-timing-function": easing,
+				"-moz-transition-timing-function": easing,
+				"-moz-transition-timing-function": easing,
+				"transition-timing-function": easing,
 				"-ms-animation-duration": duration+"ms",
 				"-webkit-animation-duration": duration+"ms",
 				"-moz-animation-duration": duration+"ms",

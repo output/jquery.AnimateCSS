@@ -1,20 +1,18 @@
 body, html {
 	margin:0;
-	font-family:'Helvetica Neue', Helvetica, Arial;
-	font-size:30px;
+	font-family: 'Helvetica Neue', Helvetica, Arial;
+	font-size:24px;
 	line-height:1.4em;
 	color:#666;
 	background:#f9f9f9;
 	overflow:hidden;
-	
 	-webkit-transform: translate3d(0,0,0);
 }
 .quad {
-	position:relative;
-	display:inline-block;
-	width:300px;
-	height:187px;
-	margin:20px;
+	float: left;
+	width: 300px;
+	height: 187px;
+	margin: 40px 0px 0 40px;
 	background:rgb(185, 65, 65);
 }
 .quad:hover {}
@@ -22,12 +20,14 @@ body, html {
 
 #controls {
 	background: #eee;
+	padding: 20px  0 20px 40px;
 }
 	.fade-bt {
 		text-transform: uppercase;
 		cursor: pointer;
 		display: inline-block;
-		margin:20px;
+		margin: 0px 20px 0 0;
+		padding: 10px 10px;
 	}
 	.fade-bt:hover {
 		color:rgb(185, 65, 65);
