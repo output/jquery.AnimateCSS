@@ -1,7 +1,7 @@
 #jquery.AnimateCSS
 *Jquery plugin for animate.css*
 
-A little plugin that makes animation of mulitple objects a lot easier and utilizes the power of the great animate.css (http://daneden.me/animate/).
+A little plugin that makes animation of mulitple objects a lot easier and utilizes the power of the wonderful [Animate.css](http://daneden.me/animate/).
 
 ##Usage
 Get [jQuery](http://jquery.com/) and [Animate.css](http://daneden.me/animate/) them in your page.
