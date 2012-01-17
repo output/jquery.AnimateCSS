@@ -14,7 +14,7 @@ $(function() {
 	});
 	
 	$('#wobble').on('click', function() {
-		$('#container').children('.quad').css("opacity",1).animateCSS('wobble', {duration:600, delay:0, eachElement: {addDuration:100, addDelay:150, randomizeDuration:0.8, randomizeDelay:0.4}, autoHide:false });
+		$('#container').children('.quad').css("opacity",1).animateCSS('wobble', {duration:600, delay:400, eachElement: {addDuration:0, addDelay:0, randomizeDuration:0, randomizeDelay:0.8}, autoHide:false });
 	});
 
 });

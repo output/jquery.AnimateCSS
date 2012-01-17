@@ -23,7 +23,6 @@ $.fn.extend({
 			easing : "cubic-bezier(0.785, 0.135, 0.150, 0.860)",
 			eachElement : { addDuration:0, addDelay:0, randomizeDuration:0, randomizeDelay:0 },
 			autoHide: false,
-			random: false,
 			onComplete: null
 		};
 		
