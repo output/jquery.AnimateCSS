@@ -19,24 +19,27 @@ Use the animateCSS method to apply classes to one or multiple objects.
 
 ##Options
 
-#duration (Number, default = 500)
+###duration (Number, default = 500)
 Duration of the animation
 
-#delay (Number, default = 0)
+###delay (Number, default = 0)
 Delay of the animation
 
-#easing(String, default = "cubic-bezier(0.785, 0.135, 0.150, 0.860)")
+###easing(String, default = "cubic-bezier(0.785, 0.135, 0.150, 0.860)")
 CSS easing that should be applied to the animated object. You can use the great [ceaser](http://matthewlein.com/ceaser/) to create easings that you can use for the easing option.
 
-#eachElement (Object, default = { addDuration:0, addDelay:0, randomizeDuration:0, randomizeDelay:0 })
+###eachElement (Object, default = { addDuration:0, addDelay:0, randomizeDuration:0, randomizeDelay:0 })
 Add duration and delay to each element in order to create swarm like animations.
 
-#autoHide(Boolean, default = false)
+###autoHide(Boolean, default = false)
 Hide the element after the animation.
 
-#onComplete(Function)
+###onComplete(Function)
 Callback function that gets executed when the animation is completed
 
+
+##Read about it…
+on our [blog](http://www.intuity.de/ux-lab-the-illusion-of-life-how-vivid-animation-can-uplift-digital-experiences).
 
 
 
